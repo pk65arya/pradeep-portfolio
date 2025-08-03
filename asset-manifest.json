@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/pradeep-portfolio/static/css/main.87e307d1.css",
-    "main.js": "/pradeep-portfolio/static/js/main.b026757c.js",
+    "main.js": "/pradeep-portfolio/static/js/main.d4f2fba1.js",
     "static/css/64.bba8fa55.chunk.css": "/pradeep-portfolio/static/css/64.bba8fa55.chunk.css",
-    "static/js/64.56dc6704.chunk.js": "/pradeep-portfolio/static/js/64.56dc6704.chunk.js",
+    "static/js/64.08ce7d10.chunk.js": "/pradeep-portfolio/static/js/64.08ce7d10.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/pradeep-portfolio/static/css/769.b3cbb36b.chunk.css",
-    "static/js/769.bda0d7b7.chunk.js": "/pradeep-portfolio/static/js/769.bda0d7b7.chunk.js",
+    "static/js/769.d8048373.chunk.js": "/pradeep-portfolio/static/js/769.d8048373.chunk.js",
     "static/media/bridgelabz.png": "/pradeep-portfolio/static/media/bridgelabz.36b568cc6923148c59e6.png",
     "static/media/Montserrat-Regular.ttf": "/pradeep-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/pradeep-portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
@@ -18,14 +18,14 @@
     "static/media/skill.svg": "/pradeep-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/pradeep-portfolio/index.html",
     "main.87e307d1.css.map": "/pradeep-portfolio/static/css/main.87e307d1.css.map",
-    "main.b026757c.js.map": "/pradeep-portfolio/static/js/main.b026757c.js.map",
+    "main.d4f2fba1.js.map": "/pradeep-portfolio/static/js/main.d4f2fba1.js.map",
     "64.bba8fa55.chunk.css.map": "/pradeep-portfolio/static/css/64.bba8fa55.chunk.css.map",
-    "64.56dc6704.chunk.js.map": "/pradeep-portfolio/static/js/64.56dc6704.chunk.js.map",
+    "64.08ce7d10.chunk.js.map": "/pradeep-portfolio/static/js/64.08ce7d10.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/pradeep-portfolio/static/css/769.b3cbb36b.chunk.css.map",
-    "769.bda0d7b7.chunk.js.map": "/pradeep-portfolio/static/js/769.bda0d7b7.chunk.js.map"
+    "769.d8048373.chunk.js.map": "/pradeep-portfolio/static/js/769.d8048373.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87e307d1.css",
-    "static/js/main.b026757c.js"
+    "static/js/main.d4f2fba1.js"
   ]
 }
