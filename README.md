@@ -3,7 +3,7 @@ A clean, responsive portfolio website built with React.js and Tailwind CSS.
 Showcases my skills, resume, and projects in a minimal and professional format.
 
 🚀 Live Demo
-🌐 View Portfolio
+🌐 View Portfolio :- https://pk65arya.github.io/pradeep-portfolio/
 
 <img width="1903" height="873" alt="image" src="https://github.com/user-attachments/assets/c6ca6649-ba9b-4179-859c-4d84ba46ecdf" />
 
@@ -62,3 +62,4 @@ Github pages
 Inspiration from open-source portfolio templates
 
 ⭐ If you like this portfolio, consider starring the repo!
+
