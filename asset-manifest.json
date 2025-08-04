@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pradeep-portfolio/static/css/main.87e307d1.css",
-    "main.js": "/pradeep-portfolio/static/js/main.7978e4e5.js",
+    "main.js": "/pradeep-portfolio/static/js/main.d4f2fba1.js",
     "static/css/64.bba8fa55.chunk.css": "/pradeep-portfolio/static/css/64.bba8fa55.chunk.css",
     "static/js/64.08ce7d10.chunk.js": "/pradeep-portfolio/static/js/64.08ce7d10.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/pradeep-portfolio/static/css/769.b3cbb36b.chunk.css",
@@ -18,7 +18,7 @@
     "static/media/skill.svg": "/pradeep-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/pradeep-portfolio/index.html",
     "main.87e307d1.css.map": "/pradeep-portfolio/static/css/main.87e307d1.css.map",
-    "main.7978e4e5.js.map": "/pradeep-portfolio/static/js/main.7978e4e5.js.map",
+    "main.d4f2fba1.js.map": "/pradeep-portfolio/static/js/main.d4f2fba1.js.map",
     "64.bba8fa55.chunk.css.map": "/pradeep-portfolio/static/css/64.bba8fa55.chunk.css.map",
     "64.08ce7d10.chunk.js.map": "/pradeep-portfolio/static/js/64.08ce7d10.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/pradeep-portfolio/static/css/769.b3cbb36b.chunk.css.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.87e307d1.css",
-    "static/js/main.7978e4e5.js"
+    "static/js/main.d4f2fba1.js"
   ]
 }
