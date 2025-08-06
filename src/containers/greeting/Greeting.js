@@ -8,7 +8,7 @@ import { greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 // Import your profile picture
-import profilePicture from "../../assets/images/pradeep-profile.jpg"; // Update with your image path
+import profilePicture from "../../assets/images/photo.jpg"; // Update with your image path
 
 export default function Greeting() {
   const { isDark } = useContext(StyleContext);
@@ -29,7 +29,9 @@ export default function Greeting() {
           </div>
           <div className="greeting-text-div">
             <div>
-              <h1 className={isDark ? "dark-mode greeting-text" : "greeting-text"}>
+              <h1
+                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+              >
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
@@ -49,9 +51,9 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <Button
                     text="Download my resume"
-                     href={greeting.resumeLink}
-    newTab={greeting.openResumeInNewTab}
-                 rel="noopener noreferrer"
+                    href={greeting.resumeLink}
+                    newTab={greeting.openResumeInNewTab}
+                    rel="noopener noreferrer"
                   />
                 )}
               </div>
@@ -59,6 +61,7 @@ export default function Greeting() {
           </div>
         </div>
       </div>
-    </Fade>
-  );
+        
+    </Fade>
+  );
 }
