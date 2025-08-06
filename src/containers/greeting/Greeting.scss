@@ -37,8 +37,11 @@
 }
 
 .profile-image {
-  max-width: 100%;
-  height: auto;
+  width: 220px; /* Adjust this value */
+    height: 220px; /* Make equal to width for perfect circle */
+    object-fit: cover;
+  // max-width: 100%;
+  // height: auto;
   border-radius: 50%;
   border: 5px solid $buttonColor;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
