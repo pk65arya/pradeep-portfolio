@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pradeep-portfolio/static/css/main.45fe7d13.css",
+    "main.css": "/pradeep-portfolio/static/css/main.e7a7c630.css",
     "main.js": "/pradeep-portfolio/static/js/main.83994150.js",
     "static/css/64.ee559582.chunk.css": "/pradeep-portfolio/static/css/64.ee559582.chunk.css",
     "static/js/64.d1a59963.chunk.js": "/pradeep-portfolio/static/js/64.d1a59963.chunk.js",
@@ -16,7 +16,7 @@
     "static/media/ancollege.png": "/pradeep-portfolio/static/media/ancollege.e3b62f04498d7e9dc2d0.png",
     "static/media/skill.svg": "/pradeep-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/pradeep-portfolio/index.html",
-    "main.45fe7d13.css.map": "/pradeep-portfolio/static/css/main.45fe7d13.css.map",
+    "main.e7a7c630.css.map": "/pradeep-portfolio/static/css/main.e7a7c630.css.map",
     "main.83994150.js.map": "/pradeep-portfolio/static/js/main.83994150.js.map",
     "64.ee559582.chunk.css.map": "/pradeep-portfolio/static/css/64.ee559582.chunk.css.map",
     "64.d1a59963.chunk.js.map": "/pradeep-portfolio/static/js/64.d1a59963.chunk.js.map",
@@ -24,7 +24,7 @@
     "769.7682f8c6.chunk.js.map": "/pradeep-portfolio/static/js/769.7682f8c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45fe7d13.css",
+    "static/css/main.e7a7c630.css",
     "static/js/main.83994150.js"
   ]
 }
