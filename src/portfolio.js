@@ -16,7 +16,9 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true, // Set to false to use static SVG
+   // Set to false since we're using your photo now
+  image: "pradeep-profile.jpg"
 };
 
 const greeting = {
@@ -26,10 +28,12 @@ const greeting = {
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web Applications with Java / JavaScript / Reactjs / Nodejs / Springboot and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1_w0lRf6LvuZk54qiChemuCfAVs0_lPIF/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+    "https://drive.google.com/file/d/1Dfga9TvZXUZHaHhYucCToGhtzpElyT08/view?usp=sharing", 
+  displayGreeting: true ,
+    displayProfilePicture: true, 
+  profilePicturePath: "pradeep-profile.jpg", 
+  openResumeInNewTab: true 
 };
-
 // Social Media Links
 
 const socialMediaLinks = {

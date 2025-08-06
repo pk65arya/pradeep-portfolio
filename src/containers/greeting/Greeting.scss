@@ -6,6 +6,7 @@
   margin: 0px auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
@@ -15,19 +16,37 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .subTitle {
   color: $subTitle !important;
 }
 
-.greeting-main {
-  display: flex;
+.greeting-text-div {
+  flex: 1.5;
+  padding: 0 20px;
 }
 
-.greeting-main > * {
+.greeting-image-div {
   flex: 1;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.profile-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid $buttonColor;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .empty-div {
@@ -37,25 +56,20 @@
 .button-greeting-div {
   display: flex;
   margin-top: 40px;
-}
-.download-link-button {
-  text-decoration: none;
+  gap: 20px;
 }
 
 .greeting-text {
   font-size: 70px;
   line-height: 1.1;
   color: $textColor !important;
+  margin-bottom: 20px;
 }
 
 .greeting-text-p {
   font-size: 30px;
   line-height: 40px;
-}
-
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
+  margin-bottom: 30px;
 }
 
 .wave-emoji {
@@ -99,29 +113,48 @@
     font-size: 20px;
   }
 }
+
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 30px;
+  .greeting-main {
+    flex-direction: column-reverse;
     text-align: center;
   }
+  
+  .greeting-text-div,
+  .greeting-image-div {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .button-greeting-div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .greeting-text {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
   .greeting-text-p {
     font-size: 16px;
     line-height: normal;
-    text-align: center;
+    margin-bottom: 20px;
   }
-  .greeting-main {
-    display: block;
-  }
-  .greeting-image-div {
-    height: 256px;
+  
+  .profile-image {
+    max-width: 200px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 320px) {
   .main {
     width: auto;
+  }
+  
+  .greeting-text {
+    font-size: 24px;
   }
 }

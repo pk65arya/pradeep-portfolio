@@ -4,42 +4,51 @@ import Button from "../../components/button/Button";
 import { openSource, socialMediaLinks } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
+
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
   );
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
-  const [repo, setrepo] = useState([]);
-  // todo: remove useContex because is not supported
+  const [repo, setRepo] = useState([]);
   const { isDark } = useContext(StyleContext);
+
+  // Add your live demo URLs mapping
+  const LIVE_DEMO_URLS = {
+    "Online-Voting-App": "https://votting-system.netlify.app/",
+    PersonalFinanceManagement: "https://personalfinancemanagement.netlify.app",
+    PayoutAutomationSystem: "https://payoutautomationsystem.onrender.com/",
+    "pradeep-portfolio": "https://pk65arya.github.io/pradeep-portfolio/",
+  };
 
   useEffect(() => {
     const getRepoData = () => {
       fetch(`${process.env.PUBLIC_URL}/profile.json`)
-        // fetch("/profile.json")
         .then((result) => {
-          if (result.ok) {
-            return result.json();
-          }
+          if (result.ok) return result.json();
           throw result;
         })
         .then((response) => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          // Enhance repo data with live links before setting state
+          const enhancedRepos = response.data.user.pinnedItems.edges.map(
+            (edge) => ({
+              ...edge,
+              liveUrl: LIVE_DEMO_URLS[edge.node.name] || null,
+            })
+          );
+          setRepo(enhancedRepos);
         })
-        .catch(function (error) {
+        .catch((error) => {
           console.error(
             `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
           );
-          setrepoFunction("Error");
+          setRepo("Error");
         });
     };
     getRepoData();
   }, []);
 
-  function setrepoFunction(array) {
-    setrepo(array);
-  }
   if (
     !(typeof repo === "string" || repo instanceof String) &&
     openSource.display
@@ -54,9 +63,15 @@ export default function Projects() {
                 console.error(
                   `Github Object for repository number : ${i} is undefined`
                 );
+                return null;
               }
               return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
+                <GithubRepoCard
+                  repo={v}
+                  key={v.node.id}
+                  isDark={isDark}
+                  liveUrl={v.liveUrl} // Pass live URL to card component
+                />
               );
             })}
           </div>
