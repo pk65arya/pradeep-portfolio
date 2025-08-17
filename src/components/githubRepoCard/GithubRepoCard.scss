@@ -7,21 +7,49 @@
   margin-bottom: 0.5rem;
 }
 
-.live-demo-button {
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.repo-button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 0.8rem;
-  background-color: rgba(46, 164, 79, 0.1);
-  color: #2ea44f;
   border: none;
   border-radius: 6px;
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: fit-content;
+  
+  // GitHub button styling
+  background-color: rgba(36, 41, 46, 0.1);
+  color: #24292e;
+  
+  &.demo-button {
+    // Demo button styling
+    background-color: rgba(46, 164, 79, 0.1);
+    color: #2ea44f;
+    
+    &:hover {
+      background-color: rgba(46, 164, 79, 0.2);
+    }
+  }
   
   &:hover {
-    background-color: rgba(46, 164, 79, 0.2);
+    background-color: rgba(36, 41, 46, 0.2);
+  }
+  
+  .button-icon {
+    display: flex;
+    align-items: center;
   }
   
   svg {
@@ -31,20 +59,45 @@
 }
 
 .dark-card-mode {
-  .live-demo-button {
-    background-color: rgba(46, 164, 79, 0.2);
-    color: #3ad374;
-    
+  .repo-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+    &.demo-button {
+      background-color: rgba(46, 164, 79, 0.2);
+      color: #3ad374;
+      
+      &:hover {
+        background-color: rgba(46, 164, 79, 0.3);
+      }
+    }
+
     &:hover {
-      background-color: rgba(46, 164, 79, 0.3);
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }
+
+/* Keep all your existing styles below */
+
 .repo-card-div {
   color: $githubRepoCardColor;
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   padding: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    
+    .buttons-container {
+      gap: 0.5rem;
+    }
+    
+    .repo-button {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.8rem;
+    }
+  }
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;

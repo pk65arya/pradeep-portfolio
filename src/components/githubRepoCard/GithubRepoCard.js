@@ -1,9 +1,9 @@
 import React from "react";
 import "./GithubRepoCard.scss";
-import { Fade } from "react-reveal";
-import { formatFileSizeDisplay } from "../../utils";
+import {Fade} from "react-reveal";
+import {formatFileSizeDisplay} from "../../utils";
 
-export default function GithubRepoCard({ repo, isDark, liveUrl }) {
+export default function GithubRepoCard({repo, isDark, liveUrl}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL in ${name} is undefined`);
@@ -15,11 +15,10 @@ export default function GithubRepoCard({ repo, isDark, liveUrl }) {
 
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div>
-        <div
-          className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
-          key={repo.node.id}
-        >
+      <div
+        className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
+        key={repo.node.id}
+      >
           {/* Card Header */}
           <div className="repo-name-div">
             <svg
@@ -35,7 +34,7 @@ export default function GithubRepoCard({ repo, isDark, liveUrl }) {
                 d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
               ></path>
             </svg>
-            <p
+            <p 
               className="repo-name"
               onClick={() => openUrlInNewTab(repo.node.url, repo.node.name)}
             >
@@ -45,52 +44,42 @@ export default function GithubRepoCard({ repo, isDark, liveUrl }) {
 
           {/* Description */}
           <div className="repo-description-container">
-            <p className="repo-description">
-              {repo.node.description.replace(/#\s*/g, "")}
-            </p>
-          </div>
+  <p className="repo-description">
+    {repo.node.description.replace(/#\s*/g, '')}
+  </p>
+</div>
 
-          {/* Live Demo Button - Positioned below description */}
-          {liveUrl && (
-            <div className="live-demo-container">
+          {/* Buttons Container */}
+          <div className="buttons-container">
+            {/* GitHub Repo Button */}
+            <button
+              className="repo-button"
+              onClick={() => openUrlInNewTab(repo.node.url, repo.node.name)}
+            >
+              <span className="button-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" fill="currentColor"/>
+                </svg>
+              </span>
+              View on GitHub
+            </button>
+            
+            {/* Live Demo Button */}
+            {liveUrl && (
               <button
-                className="live-demo-button"
-                onClick={() =>
-                  openUrlInNewTab(liveUrl, `${repo.node.name} Demo`)
-                }
+                className="repo-button demo-button"
+                onClick={() => openUrlInNewTab(liveUrl, `${repo.node.name} Demo`)}
               >
-                <span className="live-demo-icon">
+                <span className="button-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                    <polyline
-                      points="15 3 21 3 21 9"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></polyline>
-                    <line
-                      x1="10"
-                      y1="14"
-                      x2="21"
-                      y2="3"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></line>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    <polyline points="15 3 21 3 21 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></line>
                   </svg>
                 </span>
                 View Live Demo
               </button>
-            </div>
-          )}
+            )}
 
           {/* Stats */}
           <div className="repo-stats">
@@ -99,36 +88,20 @@ export default function GithubRepoCard({ repo, isDark, liveUrl }) {
                 <span>
                   <div
                     className="language-color"
-                    style={{ backgroundColor: repo.node.primaryLanguage.color }}
+                    style={{backgroundColor: repo.node.primaryLanguage.color}}
                   ></div>
                   <p>{repo.node.primaryLanguage.name}</p>
                 </span>
               )}
               <span>
-                <svg
-                  className="octicon repo-star-svg"
-                  height="20"
-                  viewBox="0 0 10 16"
-                  width="12"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
-                  ></path>
+                <svg className="octicon repo-star-svg" height="20" viewBox="0 0 10 16" width="12">
+                  <path fillRule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path>
                 </svg>
                 <p>{repo.node.forkCount}</p>
               </span>
               <span>
-                <svg
-                  className="octicon repo-star-svg"
-                  height="20"
-                  viewBox="0 0 14 16"
-                  width="14"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
-                  ></path>
+                <svg className="octicon repo-star-svg" height="20" viewBox="0 0 14 16" width="14">
+                  <path fillRule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
                 </svg>
                 <p>{repo.node.stargazers.totalCount}</p>
               </span>
