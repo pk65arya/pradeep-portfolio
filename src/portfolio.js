@@ -28,7 +28,7 @@ const greeting = {
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web Applications with Java / JavaScript / Reactjs / Nodejs / Springboot and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1TvoWE7eYkFbMOa8n_raT7mtzG0py-Doq/view?usp=sharing",
+    "https://drive.google.com/uc?export=download&id=1TvoWE7eYkFbMOa8n_raT7mtzG0py-Doq",
   displayGreeting: true,
   displayProfilePicture: true,
   profilePicturePath: "photo.jpg",
