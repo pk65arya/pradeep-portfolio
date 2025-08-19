@@ -60,9 +60,21 @@ function Header() {
           {viewResume && (
             <li>
               <a
-                href="https://drive.google.com/file/d/1TvoWE7eYkFbMOa8n_raT7mtzG0py-Doq/view?usp=sharing"
+                href={greeting.resumeViewLink}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  // Open in new tab (view)
+                  window.open(greeting.resumeViewLink, "_blank");
+                  // Trigger download
+                  const link = document.createElement("a");
+                  link.href = greeting.resumeLink;
+                  link.setAttribute("download", "resume.pdf");
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  e.preventDefault();
+                }}
               >
                 Resume
               </a>

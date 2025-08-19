@@ -48,11 +48,13 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
+                {greeting.resumeLink && greeting.resumeViewLink && (
                   <Button
                     text="Download my resume"
-                    href={greeting.resumeLink}
+                    viewHref={greeting.resumeViewLink}
+                    downloadHref={greeting.resumeLink}
                     newTab={greeting.openResumeInNewTab}
+                    downloadAndOpen={true}
                     rel="noopener noreferrer"
                   />
                 )}
@@ -61,7 +63,6 @@ export default function Greeting() {
           </div>
         </div>
       </div>
-        
     </Fade>
   );
 }

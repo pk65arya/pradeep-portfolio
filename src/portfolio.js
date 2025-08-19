@@ -29,6 +29,8 @@ const greeting = {
   ),
   resumeLink:
     "https://drive.google.com/uc?export=download&id=1TvoWE7eYkFbMOa8n_raT7mtzG0py-Doq",
+  resumeViewLink:
+    "https://drive.google.com/file/d/1TvoWE7eYkFbMOa8n_raT7mtzG0py-Doq/view?usp=sharing",
   displayGreeting: true,
   displayProfilePicture: true,
   profilePicturePath: "photo.jpg",
